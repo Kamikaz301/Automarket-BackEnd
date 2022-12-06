@@ -16,4 +16,5 @@ public class Usuario {
     private Long idUsuario;
     private String Nombre;
     private String ContraUsuario;
+    private String email;
 }

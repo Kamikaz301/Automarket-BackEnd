@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Publicacion")
+@RequestMapping("/publicacion")
 @CrossOrigin
 
 public class ControllerPublicacion {
@@ -19,7 +19,7 @@ public class ControllerPublicacion {
 
     @GetMapping("/list")
     public List<Publicacion> getAll() {
-        return null;
+        return service.getListPublicacion();
     }
 
     @PostMapping("/save")

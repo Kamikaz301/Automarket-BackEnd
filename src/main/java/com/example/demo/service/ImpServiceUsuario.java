@@ -4,6 +4,7 @@ import com.example.demo.model.Usuario;
 import com.example.demo.repository.IUsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +23,7 @@ public class ImpServiceUsuario implements IServiceUsuario{
 
     @Override
     public Usuario saveUsuario(Usuario usuario){
+        usuario.setContraUsuario(new BCryptPasswordEncoder().encode(usuario.getContraUsuario()));
         return repo.save(usuario);
     }
     @Override

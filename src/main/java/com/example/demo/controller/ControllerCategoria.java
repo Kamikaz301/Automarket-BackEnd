@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Categoria")
+@RequestMapping("/categoria")
 @CrossOrigin
 public class ControllerCategoria {
     @Qualifier("serviceCategoria")
@@ -17,7 +17,7 @@ public class ControllerCategoria {
     private IServiceCategoria service;
 
     @GetMapping("/list")
-    public List<Categoria> getAll(){return null;}
+    public List<Categoria> getAll(){return service.getListCategoria();}
 
     @PostMapping("/save")
     public Categoria saveCategoria(@RequestBody Categoria categoria){

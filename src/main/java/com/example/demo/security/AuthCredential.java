@@ -1,2 +1,9 @@
-package com.example.demo.security;public class AuthCredential {
+package com.example.demo.security;
+
+import lombok.Data;
+
+@Data
+public class AuthCredential {
+    private String email;
+    private String password;
 }

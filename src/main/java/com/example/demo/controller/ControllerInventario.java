@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Inventario")
+@RequestMapping("/inventario")
 @CrossOrigin
 
 public class ControllerInventario {
@@ -18,7 +18,7 @@ public class ControllerInventario {
     private IServiceInventario service;
 
     @GetMapping("/list")
-    public List<Inventario> getAll() { return null; }
+    public List<Inventario> getAll() { return service.getListInventario(); }
 
     @PostMapping("/save")
     public Inventario saveInventario(@RequestBody Inventario inventario) {

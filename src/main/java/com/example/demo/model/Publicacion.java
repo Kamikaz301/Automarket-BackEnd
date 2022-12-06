@@ -1,7 +1,7 @@
 package com.example.demo.model;
 
 import lombok.Data;
-
+import java.lang.String;
 import javax.persistence.*;
 
 @Entity
@@ -23,4 +23,5 @@ public class Publicacion {
     private byte status;
     private double total;
     private String titulo;
+    private String image;
 }

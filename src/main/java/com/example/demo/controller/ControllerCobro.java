@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/Cobro")
+@RequestMapping("/cobro")
 @CrossOrigin
 
 public class ControllerCobro {
@@ -20,7 +20,7 @@ public class ControllerCobro {
     private IServiceCobro service;
 
     @GetMapping("/list")
-    public List<Cobro> getAll(){return null;}
+    public List<Cobro> getAll(){return service.getListCobro();}
 
     @PostMapping("/save")
     public Cobro saveCobro(@RequestBody Cobro cobro)
